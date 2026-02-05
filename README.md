@@ -28,7 +28,7 @@ If YouTube changes the handle feed, replace the `YOUTUBE_FEED_URL` with the chan
 2. Run:
 
 ```bash
-./gradlew assembleDebug
+gradle :app:assembleDebug
 ```
 
 Your debug APK will be generated at:
@@ -38,3 +38,16 @@ app/build/outputs/apk/debug/app-debug.apk
 ```
 
 You can share that APK directly with anyone who needs to install it.
+
+## Download APK from the repository
+
+There are two easy options in GitHub:
+
+1. **Actions artifact (every `main` push + manual run)**
+   - Open the **Build Android APK** workflow run.
+   - Download the `app-debug-apk` artifact.
+
+2. **Pre-release asset (manual run)**
+   - Run the workflow with **Run workflow** in Actions.
+   - It publishes a pre-release tagged like `apk-<run_number>` with `app-debug.apk` attached.
+
